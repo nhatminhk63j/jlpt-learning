@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './Home.scss';
 import Select from 'react-select';
-import {Button} from 'react-bootstrap';
+import {Button, Row, Col} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faFilter} from '@fortawesome/free-solid-svg-icons';
+import CardTest from '../../components/CardTest/CardTest';
 
 const options = [
     { value: '1', label: 'N1' },
@@ -34,7 +35,7 @@ class Home extends Component {
                     <p className="homepage__header__title">
                         Warehouse of Japanese exam questions for free
                     </p>
-                    <p>Nay đã có ứng dụng dành cho điện thoại</p>
+                    <p>Now there is an app for phones</p>
                     <img height="70px" src="https://dethijlpt.com/static/media/app_store_icon.png" alt=""/>
                     <img height="70px" src="https://dethijlpt.com/static/media/google_play_store_icon.png" alt=""/>
                     <br/>
@@ -56,6 +57,19 @@ class Home extends Component {
                         <h2>Standardized test</h2>
                         <p>Standard exam questions are updated continuously</p>
                         </div>
+                    </div>
+                    <div className="container">
+                        <Row>
+                            <Col md={4}>
+                                <CardTest />
+                            </Col>
+                            <Col md={4}>
+                                <CardTest />
+                            </Col>
+                            <Col md={4}>
+                                <CardTest />
+                            </Col>
+                        </Row>
                     </div>
                 </div>
             </div>

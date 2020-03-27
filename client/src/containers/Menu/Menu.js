@@ -6,6 +6,7 @@ import {faHome, faChartLine, faAngleDoubleRight, faSignInAlt, faKey} from '@fort
 import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 import './Menu.scss';
 import Home from '../Home/Home';
+import Chart from '../Chart/Chart';
 
 class Menu extends Component {
     render() {
@@ -31,7 +32,8 @@ class Menu extends Component {
                     </Container>
                 </Navbar>
 
-                <Route path="/" component={Home}/>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/chart" component={Chart} />
             </BrowserRouter>
         );
     }
