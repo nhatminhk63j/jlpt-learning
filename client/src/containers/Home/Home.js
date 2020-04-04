@@ -61,13 +61,13 @@ class Home extends Component {
                     <div className="container">
                         <Row>
                             <Col md={4}>
-                                <CardTest />
+                                <CardTest id="1" />
                             </Col>
                             <Col md={4}>
-                                <CardTest />
+                                <CardTest id="2" />
                             </Col>
                             <Col md={4}>
-                                <CardTest />
+                                <CardTest id="3" />
                             </Col>
                         </Row>
                     </div>

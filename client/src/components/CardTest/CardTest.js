@@ -11,7 +11,7 @@ class CardTest extends Component {
                 <h4 className="card__title">JLPT N5 practice test</h4>
                 <div className="card__id">ID exam: JLPT12</div>
                 <p>Time litmit: 120 munites</p>
-                <a href="/test"><FontAwesomeIcon icon={faAngleDoubleRight} /> Exam now</a>
+                <a href= {"/exams/" + this.props.id}><FontAwesomeIcon icon={faAngleDoubleRight} /> Exam now</a>
 
             </div>
         );

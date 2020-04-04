@@ -7,6 +7,9 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 import './Menu.scss';
 import Home from '../Home/Home';
 import Chart from '../Chart/Chart';
+import Login from '../Login/Login';
+import Register from '../Register/Register';
+import Exams from '../Exams/Exams';
 
 class Menu extends Component {
     render() {
@@ -34,6 +37,9 @@ class Menu extends Component {
 
                 <Route exact path="/" component={Home} />
                 <Route exact path="/chart" component={Chart} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/exams/:id" component={Exams} />
             </BrowserRouter>
         );
     }
