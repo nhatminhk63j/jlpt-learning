@@ -3,13 +3,19 @@
 
 class ExamModel extends DB
 {
-    function get()
+    function get($codeExam)
     {
-        echo"<hr>"."Exam data";
+        echo "get data";
+        $qr = "SELECT E.CodeExam , E.Level
+        FROM exam AS E";
+        // WHERE E.CodeExam = $codeExam";
+        return mysqli_query($this->con, $qr);
     }
-    function add()
+    function add($CodeExam, $Level)
     {
-    	
+        $qr = "INSERT INTO exam(CodeExam, Level)
+        VALUE($CodeExam, Level) ";
+        mysqli_query($this->con, $qr);
     }
     function edit()
     {
