@@ -17,7 +17,7 @@ class QuestionModel extends DB
     {
     	$id_RLG = "id".$type;
             $qr = "INSERT INTO question.$type(title,answerA, answerB, answerD, answerTrue,$id_RLG)
-            VALUE($title, $answerA, $answerB, $answerD, $answerTrue,$idRLG) ";
+            VALUE('".$title."',".$answerA."',". $answerB."',". $answerD."',". $answerTrue."',".$idRLG."') ";
             mysql_query($this->con, $qr);
 
     }

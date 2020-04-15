@@ -7,15 +7,13 @@
 </head>
 <body>
 	<div class="container">
-		<form action="" method="POST" role="form">
+		<form action="addExam" method="POST" role="form">
 			<legend>Tạo Đề thi</legend>
 			
 			<div class="form-group">
 				<div class="row col-xl-6 ">
-					<div class="">
-						Mã đề
-						<input type="text" class="form-control" id="" placeholder="Input field"></label>
-					</div>
+					<label for="CodeExam">Mã đề</label>
+					<input name = "CodeExam" type="text" class="form-control" id="CodeExam" placeholder="Input field">
 				</div>
 				<div class="row col-xl-6">
 					
@@ -27,16 +25,18 @@
 					<option value="N3">N3</option>
 					<option value="N4">N4</option>
 					<option value="N5">N5</option>
-					</select>
-				</div>
+				</select>
 			</div>
-			<div class="form-group">
-				<legend>Ngữ pháp</legend>
-				
-			</div>
+		</div>
+		<div class="form-group">
+			<legend>Ngữ pháp</legend>
+
+		</div>
+
 
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
+	
 </div>
 </body>
 </html>

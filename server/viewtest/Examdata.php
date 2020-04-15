@@ -21,8 +21,13 @@
 					echo "<div class= 'card-body'>";
 					echo "<h4 class= 'card-title'> <label>Đề số</label> ". $row["CodeExam"]."</h4>";
 					echo "<label>Loại : </label> ".$row["Level"]."<hr>";
-					echo "<a href='' class= 'btn btn-danger' > Tham gia </a>";
-					echo "</div> </div> ";
+					echo "<div class = 'row'>";
+					echo 	"<a href='' class= 'button btn btn-info m-sm-2 ' > Tham gia </a>";
+					echo 	"<form action='Exams/remove' method='POST' role='form' class = 'm-sm-2'>";
+					echo 		"<input type='text' name = 'CodeExam' class='form-control' hidden value =".$row["CodeExam"].">";
+					echo 		"<button type='submit' class='btn btn-primary'>Xoa</button>";
+					echo 	"</form>";
+					echo "</div> </div> </div> ";
 				# code...
 				}
 				?>

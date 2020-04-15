@@ -13,17 +13,20 @@ class ExamModel extends DB
     }
     function add($CodeExam, $Level)
     {
-        $qr = "INSERT INTO exam(CodeExam, Level)
-        VALUE($CodeExam, Level) ";
+        $qr = "INSERT INTO exam (CodeExam, Level)
+        VALUE(".$CodeExam.",'".$Level."');";
         mysqli_query($this->con, $qr);
     }
     function edit()
     {
     	
     }
-    function remove()
+    function remove($CodeExam)
     {
-    	
+
+    	$qr = "DELETE FROM exam WHERE exam.CodeExam = '".$CodeExam."'";
+        echo $qr;
+        mysqli_query($this->con, $qr);
     }
 
 }

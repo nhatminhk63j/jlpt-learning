@@ -34,6 +34,7 @@
 					echo "<th>".$row["answerC"];
 					echo "<th>".$row["answerD"];
 					echo "<th>".$row["answerTrue"];
+					echo " <button type= 'button' class = 'btn btn-success'>Xóa</button>";
 				}
 				?>
 			</tbody>
