@@ -1,9 +1,10 @@
 <?php 
-define("pathViews", "./viewtest/");
+define("pathViews", "./server/viewtest/");
+define("pathModels", "./server/models/");
  class Controllers
  {
      public function model($model){
-     	require_once "./model/".$model.".php";
+     	require_once pathModels.$model.".php";
      	return new $model;
      }
      public function view($view, $data=[])
