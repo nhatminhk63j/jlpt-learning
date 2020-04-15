@@ -11,7 +11,7 @@ class App{
         public function __construct()
         {
         $arr = $this->UrlProcess();
-
+        // print_r($arr);
             	 // xử lí phần controller
         if(isset($arr[0]))
         {
