@@ -12,8 +12,8 @@ class LessonModel extends DB
 
         $qr = "SELECT T.id FROM $type AS T WHERE T.CodeExam = $CodeExam";
         $a = mysqli_query($this->con, $qr);
-        $arr = ["key" => $a];
-        if(isset($arr["id"])) return $idarr["id"];
+        $arr = mysqli_fetch_array($a);
+        if(isset($arr["id"])) return $arr["id"];
             else return -1 ;
     }
     function addReading($CodeExam, $content, $Level, $title)
@@ -38,8 +38,9 @@ class LessonModel extends DB
     }
     function remove($type, $CodeExam)
     {
-    	$qr = "DELETE FROM $type AS T WHERE T.CodeExam ='".$CodeExam."';" ;
+    	$qr = "DELETE FROM $type AS T WHERE T.CodeExam = $CodeExam;" ;
         echo $qr;
+        mysqli_query($this->con, $qr);
     }
 
 }

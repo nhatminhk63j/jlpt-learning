@@ -10,6 +10,7 @@ class Exams extends Controllers
 
 	}
 	function GetExam(){
+
 	}
 
 	function AddExam(){
@@ -24,9 +25,8 @@ class Exams extends Controllers
 	{
 		$CodeExam=  $_POST['CodeExam'];
 		$modelL = $this->model("ExamModel");
-    	// xoa 
     	$modelL->remove( $CodeExam);
-    	// header("Location: http:/jlpt-learning/Exams");
+
     	header("Location: http:/jlpt-learning/Exams");
 	}
 

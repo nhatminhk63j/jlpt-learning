@@ -52,7 +52,7 @@
 </script>
 
 <script>
-	var i = 1;
+	var i = 0;
 	function add() {
 		i++;
 		var a = document.createElement("div");
@@ -82,7 +82,7 @@
 					+"</div>"
 					+"<div>"
 					+	"<label>Dap an dung</label>"
-					+	"<select name='answerTrue_G_"+i+"' id='input' class='form-control 'required='required'>"
+					+	"<select name='answerTrue_Grammar_"+i+"' id='input' class='form-control 'required='required'>"
 					+	"<option value='A'>A</option>"
 					+	"<option value='B'>B</option>"
 					+	"<option value='C'>C</option>"
