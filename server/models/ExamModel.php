@@ -24,7 +24,7 @@ class ExamModel extends DB
     function remove($CodeExam)
     {
 
-    	$qr = "DELETE FROM exam WHERE exam.CodeExam = '".$CodeExam."'";
+    	$qr = "DELETE FROM exam WHERE exam.CodeExam = $CodeExam ;";
         echo $qr;
         mysqli_query($this->con, $qr);
     }
