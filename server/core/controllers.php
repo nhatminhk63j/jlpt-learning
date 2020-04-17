@@ -1,7 +1,7 @@
 <?php 
 define("pathViews", "./server/viewtest/");
 define("pathModels", "./server/models/");
- class Controllers  extends CI_Controller 
+ class Controllers
  {
      public function model($model){
      	require_once pathModels.$model.".php";

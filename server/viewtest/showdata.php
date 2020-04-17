@@ -20,7 +20,7 @@
 					<th>Đáp án</th>
 					<th>Hình thức</th>
 					<th>Trình độ</th>
-					<th>Tiêu đề lớn </th>
+					<th>Mã RLG </th>
 				</tr>
 			</thead>
 			<tbody class=" text-center">
@@ -34,6 +34,7 @@
 					echo "<th>".$row["answerC"];
 					echo "<th>".$row["answerD"];
 					echo "<th>".$row["answerTrue"];
+					echo " <button type= 'button' class = 'btn btn-success'>Xóa</button>";
 				}
 				?>
 			</tbody>

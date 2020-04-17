@@ -3,9 +3,8 @@
 
 class QuestionModel extends DB
 {
-    function get($type,$idType)
-    {
-        echo "get data";
+    function get($idRLG, $type)
+    {   
         $table = "question".$type;
         $idlesson = "id".$type;
         $qr = "SELECT q.id, q.`title`, q.answerA, q.answerB, q.answerC, q.answerD, q.answerTrue
@@ -13,21 +12,27 @@ class QuestionModel extends DB
         WHERE q.$idlesson = $idType ";
         return mysqli_query($this->con, $qr);
     }
-    function add($type,$tile, $answerA, $answerB, $answerD, $answerTrue,$idRLG)
+    function add($type,$title, $answerA, $answerB,$answerC, $answerD, $answerTrue,$idRLG)
     {
     	$id_RLG = "id".$type;
-            $qr = "INSERT INTO question.$type(title,answerA, answerB, answerD, answerTrue,$id_RLG)
-            VALUE($title, $answerA, $answerB, $answerD, $answerTrue,$idRLG) ";
-            mysql_query($this->con, $qr);
+        $q = "question".$type;
+            $qr = " INSERT INTO $q (`id`, `title`, `answerA`, `answerB`, `answerC`, `answerD`, `answerTrue`, $id_RLG) VALUES (NULL, '$title', '$answerA', '$answerB', '$answerC', '$answerD', '$answerTrue', '$idRLG');" ;
+            mysqli_query($this->con, $qr);
 
     }
     function edit()
     {
     	
     }
-    function remove()
+    function remove($type, $id)
     {
-    	
+    	$q = "question".$type;
+        $qr = "DELETE FROM $q WHERE $q.`id` = $id";
+        mysqli_query($this->con, $qr);
+    }
+    function getAll()
+    {
+        
     }
 
 }
