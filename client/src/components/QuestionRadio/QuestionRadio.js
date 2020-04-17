@@ -13,6 +13,7 @@ class QuestionRadio extends Component {
     render() {
         return (
             <div className="radio">
+                <p> {this.props.children} </p>
                 <div className="question">
                     <span className="radio__index"> {this.props.index + 1} </span>
                     {convertKandi(this.props.item.question)}

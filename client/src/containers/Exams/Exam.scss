@@ -5,6 +5,12 @@
     overflow-x: hidden;
     height: 80vh;
 
+    .numberHighLight{
+        border: 2px solid rgb(105, 102, 102);
+        padding: 0px 10px;
+        color: rgb(12, 12, 12);
+    }
+
     &__header{
         h2{
             font-weight: 900;
